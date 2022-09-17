@@ -1,0 +1,21 @@
+#profile-pic{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin: 0 auto;
+}
+
+.card{
+    width: 12rem;
+}
+
+.card-title{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card-text{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
