@@ -6,7 +6,7 @@ import {UserInfoComponent} from './user-info/user-info.component';
 import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
-  { path: ':userid', component: UserInfoComponent }
+  { path: 'users/:userid', component: UserInfoComponent }
 ];
 @NgModule({
   declarations: [],
