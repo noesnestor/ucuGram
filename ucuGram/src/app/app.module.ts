@@ -3,15 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { UserInfoComponent } from './user-info/user-info.component';
-
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
+import { MenubarComponent } from './menubar/menubar.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    MenubarComponent
   ],
   imports: [
     BrowserModule,
