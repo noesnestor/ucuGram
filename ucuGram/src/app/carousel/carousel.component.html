@@ -1,0 +1,18 @@
+<div *ngIf="posts" id="carouselExampleControlsNoTouching" class="carousel slide carousel-css" data-bs-touch="true" data-bs-interval="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active"> 
+      <app-post-container [post]="posts[0]"></app-post-container>
+    </div>
+    <div *ngFor="let post of posts | slice:1 " class="carousel-item">
+        <app-post-container [post]="post"></app-post-container>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CarouselComponent } from './carousel/carousel.component'
 
 import {UserInfoComponent} from './user-info/user-info.component';
 
@@ -8,7 +9,8 @@ import { PostContainerComponent } from './post-container/post-container.componen
 
 const routes: Routes = [
   { path: ':userid', component: UserInfoComponent },
-  { path: 'posts/:userid', component: PostContainerComponent}
+  { path: 'posts/:userid', component: PostContainerComponent},
+  { path: 'home', component: CarouselComponent}
 ];
 @NgModule({
   declarations: [],

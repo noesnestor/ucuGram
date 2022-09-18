@@ -9,13 +9,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 import { PostContainerComponent } from './post-container/post-container.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserInfoComponent,
-    PostContainerComponent
+    PostContainerComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
