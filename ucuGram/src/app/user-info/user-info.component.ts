@@ -18,16 +18,16 @@ export class UserInfoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getUser();
+    // this.getUser();
   }
 
   @Input() user?: User;
 
-  getUser(): void{
-    const userid = String(this.route.snapshot.paramMap.get('userid'));
-    this.userService.getUser(userid)
-      .subscribe(user => this.user = user);
-  }
+  // getUser(): void{
+  //   const userid = String(this.route.snapshot.paramMap.get('userid'));
+  //   this.userService.getUser(userid)
+  //     .subscribe(user => this.user = user);
+  // }
   
 
 }
