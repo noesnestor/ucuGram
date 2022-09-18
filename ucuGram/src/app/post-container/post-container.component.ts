@@ -2,7 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { User } from '../user';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../user.service';
-import { Post } from './Post';
+import { PostService } from '../post-service.service';
+import { Post } from '../post';
 
 @Component({
   selector: 'app-post-container',
@@ -12,24 +13,28 @@ import { Post } from './Post';
 export class PostContainerComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
-    private userService: UserService
+    private userService: UserService,
+    private postService: PostService
   ) { }
 
   ngOnInit(): void {
-    this.getPost();
     this.getUser();
+    this.getPost();
   }
-
+  id: number = 2;
   @Input() user?: User;
   @Input() post?: Post;
 
   getUser(): void{
-    const userid = String(this.route.snapshot.paramMap.get('userid'));
-    this.userService.getUser(userid)
+    if (this.post){
+      this.userService.getUser(this.post.user_id)
       .subscribe(user => this.user = user);
+    }    
   }
   getPost(): void {
     const postid = String(this.route.snapshot.paramMap.get('postid'));
+    this.postService.getPostByID(this.id).subscribe(post => {this.post = post;
+                                                            this.getUser();})
   }
   showPost(post:Post): void{}
 }

@@ -1,7 +1,7 @@
-<!-- (click)="showPost(post)" *ngIf="post" -->
-<button type="button" class="showPost-button">
+
+<button type="button" class="showPost-button" (click)="showPost(post)" *ngIf="post">
     <div class="photo-container">
-        <img class="post-photo" src="../../assets/userExample.jpg" alt="">
+        <img class="post-photo" src="{{post.src}}" alt="">
     </div>
     <div class="user-info-container">
         <app-user-info [user]="user"></app-user-info>

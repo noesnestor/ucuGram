@@ -1,5 +1,5 @@
 export interface Post{
-    post_id: number;
+    id: number;
     src: string;
     date: string;
     user_id: string;
