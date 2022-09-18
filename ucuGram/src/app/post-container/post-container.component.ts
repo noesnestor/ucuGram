@@ -19,9 +19,9 @@ export class PostContainerComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUser();
-    this.getPost();
+  
   }
-  id: number = 2;
+  
   @Input() user?: User;
   @Input() post?: Post;
 
@@ -31,10 +31,10 @@ export class PostContainerComponent implements OnInit {
       .subscribe(user => this.user = user);
     }    
   }
-  getPost(): void {
-    const postid = String(this.route.snapshot.paramMap.get('postid'));
-    this.postService.getPostByID(this.id).subscribe(post => {this.post = post;
-                                                            this.getUser();})
-  }
+  // getPost(): void {
+  //   const postid = String(this.route.snapshot.paramMap.get('postid'));
+  //   this.postService.getPostByID(this.id).subscribe(post => {this.post = post;
+  //                                                           this.getUser();})
+  // }
   showPost(post:Post): void{}
 }
