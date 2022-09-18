@@ -4,9 +4,11 @@ import { CommonModule } from '@angular/common';
 import {UserInfoComponent} from './user-info/user-info.component';
 
 import {RouterModule, Routes} from '@angular/router';
+import { PostContainerComponent } from './post-container/post-container.component';
 
 const routes: Routes = [
-  { path: ':userid', component: UserInfoComponent }
+  { path: ':userid', component: UserInfoComponent },
+  { path: 'posts/:userid', component: PostContainerComponent}
 ];
 @NgModule({
   declarations: [],

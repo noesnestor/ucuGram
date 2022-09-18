@@ -1,0 +1,9 @@
+
+<button type="button" class="showPost-button" (click)="showPost(post)" *ngIf="post">
+    <div class="photo-container">
+        <img class="post-photo" src="{{post.src}}" alt="">
+    </div>
+    <div class="user-info-container">
+        <app-user-info [user]="user"></app-user-info>
+    </div>
+</button>
