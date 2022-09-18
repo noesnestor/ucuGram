@@ -16,7 +16,7 @@ export class InMemoryDataService implements InMemoryDbService {
   ];
   const posts : Post[] =[
     { id: 1, src: "../assets/users/user4.jpg", date: "", user_id: "pepe_garcia1", alt: ""},
-    { id: 2, src: "../assets/users/user2.jpg", date: "", user_id: "jacksonjane4ever", alt: ""},
+    { id: 2, src: "../assets/dogs/dog2.jpg", date: "", user_id: "jacksonjane4ever", alt: ""},
     { id: 3, src: "../assets/users/user5.jpg", date: "", user_id: "kroosfriend15", alt: ""},
     { id: 4, src: "../assets/users/user3.jpg", date: "", user_id: "dasilva_lukinhas", alt: ""}
   ]

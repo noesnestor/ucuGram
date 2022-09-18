@@ -6,16 +6,16 @@
     margin: 0 auto;
 }
 
-.card{
-    width: 12rem;
-}
+
 
 .card-title{
-    font-size: 1.2rem;
+    font-size: 0.94rem;
     font-weight: 600;
+    text-align: left;
 }
 
 .card-text{
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 400;
+    text-align: left;
 }
