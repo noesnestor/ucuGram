@@ -1,6 +1,6 @@
 
 
-@media (max-width: 768px) {
+@media (max-width: 418px) {
   .navbar{
     position: absolute;
     display: flex;
@@ -12,14 +12,14 @@
     
 }
  .nav{
-  height: 80px;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   
  }
 
  li{
-  width: 25%;
+  width: 20%;
  }
 
 
