@@ -5,9 +5,11 @@ import { AppComponent } from './app.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpClientModule } from '@angular/common/http';
 import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 import { PostContainerComponent } from './post-container/post-container.component';
+
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { PostContainerComponent } from './post-container/post-container.componen
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }),
     AppRoutingModule

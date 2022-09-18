@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 
 import { User } from './user';
-import { USERS } from './mock-users';
 
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -14,7 +13,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class UserService {
 
-  constructor(
+  constructor(private http: HttpClient
   ) { }
 
   private usersUrl = 'api/users';  // URL to web api
@@ -24,9 +23,9 @@ export class UserService {
 
   //TODO: Change error handling and 'console.log's to better solutions of error handling.
 
-  getUser(id: string): Observable<User> {
-    const user = USERS.find(u => u.userid === id)!;
-    return of(user);
+  getUser(userid: string): Observable<User> {
+    const url = `${this.usersUrl}/${userid}`;
+    return this.http.get<User>(url).pipe(catchError(this.handleError<User>(`getUser userid=${userid}`)));
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
