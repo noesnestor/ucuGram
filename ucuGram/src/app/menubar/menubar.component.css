@@ -8,26 +8,24 @@
     color: white;
     width: 100%;
     border-top: 1px solid black;
+  }
+  .nav{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
     
-    
-}
- .nav{
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
+  }
+  li{
+    width: 20%;
+  }
+
   
- }
-
- li{
-  width: 20%;
- }
-
-
-
 }
 
-
-
+.discover{
+  background: linear-gradient(#F205E2,#F23322);
+  border-radius: 32%;
+}
 
 ul{
   list-style-type: none;
