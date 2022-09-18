@@ -28,6 +28,4 @@ export class UserInfoComponent implements OnInit {
     this.userService.getUser(userid)
       .subscribe(user => this.user = user);
   }
-  
-
 }
