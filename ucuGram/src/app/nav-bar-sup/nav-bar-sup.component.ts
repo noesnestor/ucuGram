@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar-sup',
@@ -9,7 +9,10 @@ export class NavBarSupComponent implements OnInit {
 
   constructor() { }
 
+  @Input() navtext?: string;
+  
   ngOnInit(): void {
+
   }
 
 }

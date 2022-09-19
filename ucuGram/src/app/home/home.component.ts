@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,8 +9,10 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
-
+ 
   ngOnInit(): void {
   }
+  
+
 
 }
