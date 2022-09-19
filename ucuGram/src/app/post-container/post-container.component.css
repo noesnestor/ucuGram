@@ -4,6 +4,7 @@
     margin-bottom: 5%;
     height: 245px;
     overflow: hidden;
+    object-fit: cover;
 }
 
 .showPost-button {
