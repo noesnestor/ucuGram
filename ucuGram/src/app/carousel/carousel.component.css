@@ -8,4 +8,5 @@
 
 .carousel-item{
     object-fit: cover;
+    overflow:hidden;
 }

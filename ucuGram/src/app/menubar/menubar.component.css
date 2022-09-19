@@ -11,9 +11,11 @@
     color: white;
     width: 100%;
     border-top: 1px solid black;
+    width: 100%;
+    overflow:hidden;
   }
   .nav{
-    height: 50px;
+    height: 47px;
     display: flex;
     justify-content: space-between;
     
