@@ -1,9 +1,9 @@
 <div *ngIf="posts" id="carouselExampleControlsNoTouching" class="carousel slide carousel-css" data-bs-touch="true" data-bs-interval="false">
   <div class="carousel-inner">
-    <div class="carousel-item active"> 
+    <div class="carousel-item active" (click)="showPost(posts[0])"> 
       <app-post-container [post]="posts[0]" ></app-post-container>
     </div>
-    <div *ngFor="let post of posts | slice:1 " class="carousel-item">
+    <div *ngFor="let post of posts | slice:1 " class="carousel-item" (click)="showPost(post)">
         <app-post-container [post]="post"></app-post-container>
    <!--  <div class="carousel-item active"> 
       <img class="w-100" src="../../assets/users/user5.jpg"> -->
@@ -17,4 +17,13 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div>
+
+
+<!-- // full size photo modal -->
+
+
+<div id="modal-photo" class="modal">
+  <span class="close" (click)="closeModal()">&times;</span>
+  <img class="modal-content" src="" alt="">
 </div>
