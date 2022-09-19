@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CarouselComponent } from './carousel/carousel.component'
+import { HomeComponent } from './home/home.component'
 
 import {UserInfoComponent} from './user-info/user-info.component';
 
@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/discover/1', pathMatch: 'full' },
   { path: ':userid', component: UserInfoComponent },
   { path: 'posts/:userid', component: PostContainerComponent},
-  { path: 'discover/1', component: CarouselComponent}
+  { path: 'discover/1', component: HomeComponent}
 ];
 @NgModule({
   declarations: [],

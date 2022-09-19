@@ -11,6 +11,7 @@ import { PostContainerComponent } from './post-container/post-container.componen
 import { CarouselComponent } from './carousel/carousel.component';
 import { MenubarComponent } from './menubar/menubar.component';
 import { NavBarSupComponent } from './nav-bar-sup/nav-bar-sup.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { NavBarSupComponent } from './nav-bar-sup/nav-bar-sup.component';
     PostContainerComponent,
     CarouselComponent,
     MenubarComponent,
-    NavBarSupComponent
+    NavBarSupComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
