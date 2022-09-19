@@ -1,9 +1,9 @@
-.navbar{
+.navbar.mobile-menu{
   visibility:hidden !important;
 }
 
 @media (max-width: 418px) {
-  .navbar{
+  .navbar.mobile-menu{
     visibility:visible !important;
     position: absolute;
     display: flex;
