@@ -3,13 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { UserInfoComponent } from './user-info/user-info.component';
-
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
 import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 import { PostContainerComponent } from './post-container/post-container.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { MenubarComponent } from './menubar/menubar.component';
+import { NavBarSupComponent } from './nav-bar-sup/nav-bar-sup.component';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { CarouselComponent } from './carousel/carousel.component';
     AppComponent,
     UserInfoComponent,
     PostContainerComponent,
-    CarouselComponent
+    CarouselComponent,
+    MenubarComponent,
+    NavBarSupComponent
   ],
   imports: [
     BrowserModule,

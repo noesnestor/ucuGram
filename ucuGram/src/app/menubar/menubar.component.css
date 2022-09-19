@@ -1,0 +1,43 @@
+.navbar.mobile-menu{
+  visibility:hidden !important;
+}
+
+@media (max-width: 418px) {
+  .navbar.mobile-menu{
+    visibility:visible !important;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    border-top: 1px solid black;
+  }
+  .nav{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  li{
+    width: 20%;
+  }
+  .discover{
+    background: linear-gradient(#F205E2,#F23322);
+    border-radius: 32%;
+  }
+  
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    float: right;
+  }
+
+  
+}
+
+
+
