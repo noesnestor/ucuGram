@@ -23,11 +23,11 @@ export class UserInfoComponent implements OnInit {
 
   @Input() user?: User;
 
-  // getUser(): void{
-  //   const userid = String(this.route.snapshot.paramMap.get('userid'));
-  //   this.userService.getUser(userid)
-  //     .subscribe(user => this.user = user);
-  // }
+ /* getUser(): void{
+    const userid = String(this.route.snapshot.paramMap.get('userid'));
+     this.userService.getUser(userid)
+      .subscribe(user => this.user = user);
+   } */
   
 
 }

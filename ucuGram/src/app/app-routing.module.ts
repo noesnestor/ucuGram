@@ -8,9 +8,10 @@ import {RouterModule, Routes} from '@angular/router';
 import { PostContainerComponent } from './post-container/post-container.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/discover/1', pathMatch: 'full' },
   { path: ':userid', component: UserInfoComponent },
   { path: 'posts/:userid', component: PostContainerComponent},
-  { path: 'home', component: CarouselComponent}
+  { path: 'discover/1', component: CarouselComponent}
 ];
 @NgModule({
   declarations: [],

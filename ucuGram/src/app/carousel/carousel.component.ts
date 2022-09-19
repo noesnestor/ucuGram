@@ -19,7 +19,6 @@ export class CarouselComponent implements OnInit {
     this.getPosts()
   }
 
-
   getPosts(): void{
     this.postService.getPosts().subscribe(posts => this.posts = posts);
   }

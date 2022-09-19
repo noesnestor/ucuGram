@@ -1,10 +1,12 @@
 <div *ngIf="posts" id="carouselExampleControlsNoTouching" class="carousel slide carousel-css" data-bs-touch="true" data-bs-interval="false">
   <div class="carousel-inner">
     <div class="carousel-item active"> 
-      <app-post-container [post]="posts[0]"></app-post-container>
+      <app-post-container [post]="posts[0]" ></app-post-container>
     </div>
     <div *ngFor="let post of posts | slice:1 " class="carousel-item">
         <app-post-container [post]="post"></app-post-container>
+   <!--  <div class="carousel-item active"> 
+      <img class="w-100" src="../../assets/users/user5.jpg"> -->
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">

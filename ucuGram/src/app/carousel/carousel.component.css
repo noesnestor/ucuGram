@@ -1,5 +1,11 @@
 .carousel-css{
-    width: fit-content;
     margin-left: 5%;
-    margin-right: 5%;
+    margin-right: 5%;   
+    width: fit-content;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.carousel-item{
+    object-fit: cover;
 }
