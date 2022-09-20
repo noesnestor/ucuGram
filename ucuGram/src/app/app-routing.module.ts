@@ -6,13 +6,15 @@ import {UserInfoComponent} from './user-info/user-info.component';
 
 import {RouterModule, Routes} from '@angular/router';
 import { PostContainerComponent } from './post-container/post-container.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/discover/1', pathMatch: 'full' },
   { path: ':userid', component: UserInfoComponent },
   { path: 'posts/:userid', component: PostContainerComponent},
-  { path: 'discover/1', component: HomeComponent}
+  { path: 'discover/1', component: HomeComponent},
+  { path: 'profile/:userid', component: ProfileComponent}
 ];
 @NgModule({
   declarations: [],

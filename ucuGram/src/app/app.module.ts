@@ -12,6 +12,10 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { MenubarComponent } from './menubar/menubar.component';
 import { NavBarSupComponent } from './nav-bar-sup/nav-bar-sup.component';
 import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileUserComponent } from './profile-user/profile-user.component';
+import { ProfileInteractionComponent } from './profile-interaction/profile-interaction.component';
+import { ProfilePhotosComponent } from './profile-photos/profile-photos.component';
 
 
 @NgModule({
@@ -22,7 +26,11 @@ import { HomeComponent } from './home/home.component';
     CarouselComponent,
     MenubarComponent,
     NavBarSupComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent,
+    ProfileUserComponent,
+    ProfileInteractionComponent,
+    ProfilePhotosComponent
   ],
   imports: [
     BrowserModule,
