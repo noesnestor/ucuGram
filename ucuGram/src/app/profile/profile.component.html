@@ -1,6 +1,6 @@
 <div class="profile">
     <profile-user [user]="user"></profile-user>
     <profile-interaction [user]="user"></profile-interaction>
-    <profile-photos></profile-photos>
+    <profile-photos *ngIf="user" [user]="user"></profile-photos>
 </div>
 
