@@ -14,12 +14,5 @@ export class ProfileInteractionComponent implements OnInit {
   @Input() user? : User;
 
   ngOnInit(): void {
-    this.getUser();
-  }
-
-  getUser() : void
-  {
-    const user = "kroosfriend15";
-    this.userService.getUser(user).subscribe(user => this.user = user);
   }
 }
