@@ -12,6 +12,9 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { MenubarComponent } from './menubar/menubar.component';
 import { NavBarSupComponent } from './nav-bar-sup/nav-bar-sup.component';
 import { HomeComponent } from './home/home.component';
+import { SearchComponent } from './search/search.component';
+import { SearchBarComponent } from './search/search-bar/search-bar.component';
+import { PhotoGridComponent } from './search/photo-grid/photo-grid.component';
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { HomeComponent } from './home/home.component';
     CarouselComponent,
     MenubarComponent,
     NavBarSupComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent,
+    SearchBarComponent,
+    PhotoGridComponent
   ],
   imports: [
     BrowserModule,

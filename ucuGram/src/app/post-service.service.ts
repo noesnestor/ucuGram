@@ -38,6 +38,17 @@ private handleError<T>(operation = 'operation', result?: T) {
     return of(result as T);
   };
 }
+  getPostsByAlt(event: string): Observable<Post[]> {
+    let filteredPosts = new Array<Post>();
+    this.http.get<Post[]>(this.postsUrl).subscribe(posts => {
+      posts.forEach(post => {
+        if (post.alt.includes(event)) {
+          filteredPosts.push(post);
+        }
+      });
+    });
+    return of(filteredPosts);
+  }
 }
 
 
