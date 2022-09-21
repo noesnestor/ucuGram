@@ -8,3 +8,9 @@
     object-fit: cover;
     overflow:hidden;
 }
+
+.subtitle-nav-bar{
+    font-size: 0.7rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-weight: 500;
+}
