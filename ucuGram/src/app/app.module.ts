@@ -16,6 +16,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileUserComponent } from './profile-user/profile-user.component';
 import { ProfileInteractionComponent } from './profile-interaction/profile-interaction.component';
 import { ProfilePhotosComponent } from './profile-photos/profile-photos.component';
+import { SubirFotoComponent } from './subir-foto/subir-foto.component';
+import { SubirFotoInteractionComponent } from './subir-foto-interaction/subir-foto-interaction.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { ProfilePhotosComponent } from './profile-photos/profile-photos.componen
     ProfileComponent,
     ProfileUserComponent,
     ProfileInteractionComponent,
-    ProfilePhotosComponent
+    ProfilePhotosComponent,
+    SubirFotoComponent,
+    SubirFotoInteractionComponent
   ],
   imports: [
     BrowserModule,
