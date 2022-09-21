@@ -15,6 +15,11 @@ import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { SearchBarComponent } from './search/search-bar/search-bar.component';
 import { PhotoGridComponent } from './search/photo-grid/photo-grid.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileUserComponent } from './profile-user/profile-user.component';
+import { ProfileInteractionComponent } from './profile-interaction/profile-interaction.component';
+import { ProfilePhotosComponent } from './profile-photos/profile-photos.component';
+
 
 
 @NgModule({
@@ -28,7 +33,11 @@ import { PhotoGridComponent } from './search/photo-grid/photo-grid.component';
     HomeComponent,
     SearchComponent,
     SearchBarComponent,
-    PhotoGridComponent
+    PhotoGridComponent,
+    ProfileComponent,
+    ProfileUserComponent,
+    ProfileInteractionComponent,
+    ProfilePhotosComponent
   ],
   imports: [
     BrowserModule,

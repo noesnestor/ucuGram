@@ -15,12 +15,19 @@
   
 }
 
-li{
+li {
   width: 20%;
 }
-.highlighted{
+.nav-link.highlighted {
   background: linear-gradient(#F205E2,#F23322);
   border-radius: 32%;
+  min-width: 20%;
+}
+
+.highlighted svg {
+  display: flex;
+  width: 20px;
+  height: 20px;
 }
 
 ul{
@@ -31,6 +38,14 @@ ul{
 
 li {
   float: right;
+}
+
+@media (max-width: 320px) {
+  
+  .nav-link.highlighted svg {
+    min-width: 20%;
+  }
+
 }
 
   

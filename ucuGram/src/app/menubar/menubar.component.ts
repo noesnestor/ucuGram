@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Post } from '../post';
+import { PostService } from '../post-service.service';
+import { User } from '../user';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-menubar',
@@ -7,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenubarComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(
+  ) { }
 
   ngOnInit(): void {
   }
 
+  @Input() user_id?: string;
+  
 }
