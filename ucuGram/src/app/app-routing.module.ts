@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: ':userid', component: UserInfoComponent },
   { path: 'posts/:userid', component: PostContainerComponent},
   { path: 'discover/1', component: HomeComponent},
-  { path: 'search/1', component: SearchComponent},
+  { path: 'search/:userid', component: SearchComponent},
 ];
 @NgModule({
   declarations: [],
