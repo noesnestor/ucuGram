@@ -1,0 +1,16 @@
+<div *ngIf="user">
+    <div class="row py-3">
+        <img id= "profile-pic" src={{user.profilePic}}>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col pb-1 d-flex justify-content-center">
+                <h5 class="profile-name">{{user.name}}</h5>
+            </div>
+        <div class="row">
+            <div class="col pb-1 d-flex justify-content-center">
+                <p class="profile-location">{{user.city}},{{user.state}}</p>
+            </div>
+        </div>
+    </div>
+</div>

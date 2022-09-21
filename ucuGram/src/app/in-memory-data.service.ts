@@ -25,7 +25,7 @@ export class InMemoryDataService implements InMemoryDbService {
     { id: 8, src: "assets/cats/cat1.jpg", date: "", user_id: "dasilva_lukinhas", alt: "cats"},
     { id: 9, src: "assets/cats/cat2.jpg", date: "", user_id: "pepe_garcia1", alt: "cats"},
     { id: 10, src: "assets/cats/cat3.jpg", date: "", user_id: "jacksonjane4ever", alt: "cats"},
-    { id: 11, src: "assets/cats/cat4.jpeg", date: "", user_id: "kroosfriend15", alt: "cats"},
+    { id: 11, src: "assets/cats/cat4.jpg", date: "", user_id: "kroosfriend15", alt: "cats"},
     { id: 12, src: "assets/cats/cat5.jpg", date: "", user_id: "dasilva_lukinhas", alt: "cats"},
     { id: 13, src: "assets/cats/cat6.jpg", date: "", user_id: "pepe_garcia1", alt: "cats"},
     { id: 14, src: "assets/cats/cat7.jpg", date: "", user_id: "jacksonjane4ever", alt: "cats"},

@@ -20,6 +20,18 @@ export class PostService {
     return this.http.get<Post[]>(this.postsUrl);
   }
 
+  getPostsByUserid(user_id: string): Observable<Post[]> {
+    let filteredPosts = new Array<Post>();
+    this.http.get<Post[]>(this.postsUrl).subscribe(posts => {
+      posts.forEach(post => {
+        if (post.user_id.includes(user_id)) {
+          filteredPosts.push(post);
+        }
+      });
+    });
+    return of(filteredPosts);
+  }
+
   public getPostByID(id: number) : Observable<Post>
   {
     const url = `${this.postsUrl}/${id}`;

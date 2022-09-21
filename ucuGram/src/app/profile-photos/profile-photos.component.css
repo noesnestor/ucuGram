@@ -1,0 +1,12 @@
+.post-photo{
+    width: 100%;
+    max-width: max-content;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.container{
+    overflow: scroll;
+    height: 160px;
+    width: 100%;
+}
