@@ -1,10 +1,11 @@
-<div class="a" *ngIf="posts">
+<div class="profile-photos" *ngIf="posts">
     <div class="container d-flex">
         <div class="row">
                 <div *ngFor="let post of posts" class="col-5">
                     <img class="post-photo" src="{{post.src}}" alt="">
                 </div>
+                <button class="btn btn-light btn-outline-dark btn-block">See More</button>
             </div>
-        </div>     
+        </div>
     </div>
 
