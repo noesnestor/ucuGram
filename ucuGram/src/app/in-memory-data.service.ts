@@ -15,10 +15,28 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 'dasilva_lukinhas', name: 'Lucas Da Silva', country: 'Brazil', state: 'RJ', city: 'Río de Janeiro', email: 'lucasthedragão@hotmail.com', password: 'eusuincrivel1234', profilePic: '../assets/users/user6.jpg' },
   ];
   const posts : Post[] =[
-    { id: 1, src: "assets/users/user4.jpg", date: "", user_id: "pepe_garcia1", alt: ""},
-    { id: 2, src: "assets/dogs/dog2.jpg", date: "", user_id: "jacksonjane4ever", alt: ""},
-    { id: 3, src: "assets/postValverde.jpeg", date: "", user_id: "kroosfriend15", alt: ""},
-    { id: 4, src: "assets/users/postUser6.jpg", date: "", user_id: "dasilva_lukinhas", alt: ""}
+    { id: 1, src: "assets/dogs/dog1.jpg", date: "", user_id: "pepe_garcia1", alt: "dogs"},
+    { id: 2, src: "assets/dogs/dog2.jpg", date: "", user_id: "jacksonjane4ever", alt: "dogs"},
+    { id: 3, src: "assets/dogs/dog3.jpg", date: "", user_id: "kroosfriend15", alt: "dogs"},
+    { id: 4, src: "assets/dogs/dog4.jpg", date: "", user_id: "dasilva_lukinhas", alt: "dogs"},
+    { id: 5, src: "assets/dogs/dog5.jpg", date: "", user_id: "pepe_garcia1", alt: "dogs"},
+    { id: 6, src: "assets/dogs/dog6.jpg", date: "", user_id: "jacksonjane4ever", alt: "dogs"},
+    { id: 7, src: "assets/dogs/dog7.jpg", date: "", user_id: "kroosfriend15", alt: "dogs"},
+    { id: 8, src: "assets/cats/cat1.jpg", date: "", user_id: "dasilva_lukinhas", alt: "cats"},
+    { id: 9, src: "assets/cats/cat2.jpg", date: "", user_id: "pepe_garcia1", alt: "cats"},
+    { id: 10, src: "assets/cats/cat3.jpg", date: "", user_id: "jacksonjane4ever", alt: "cats"},
+    { id: 11, src: "assets/cats/cat4.jpeg", date: "", user_id: "kroosfriend15", alt: "cats"},
+    { id: 12, src: "assets/cats/cat5.jpg", date: "", user_id: "dasilva_lukinhas", alt: "cats"},
+    { id: 13, src: "assets/cats/cat6.jpg", date: "", user_id: "pepe_garcia1", alt: "cats"},
+    { id: 14, src: "assets/cats/cat7.jpg", date: "", user_id: "jacksonjane4ever", alt: "cats"},
+    { id: 15, src: "assets/fishes/fish1.jpeg", date: "", user_id: "kroosfriend15", alt: "fishes"},
+    { id: 16, src: "assets/fishes/fish2.jpg", date: "", user_id: "dasilva_lukinhas", alt: "fishes"},
+    { id: 17, src: "assets/fishes/fish3.jpg", date: "", user_id: "pepe_garcia1", alt: "fishes"},
+    { id: 18, src: "assets/fishes/fish4.jpg", date: "", user_id: "jacksonjane4ever", alt: "fishes"},
+    { id: 19, src: "assets/fishes/fish5.jpeg", date: "", user_id: "kroosfriend15", alt: "fishes"},
+    { id: 20, src: "assets/fishes/fish6.jpg", date: "", user_id: "dasilva_lukinhas", alt: "fishes"},
+    { id: 21, src: "assets/fishes/fish7.jpg", date: "", user_id: "pepe_garcia1", alt: "fishes"},
+    { id: 22, src: "assets/postValverde.jpeg", date: "", user_id: "kroosfriend15", alt: "soccer"}
   ]
     return {users, posts};
   }
