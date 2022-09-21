@@ -8,6 +8,7 @@ import { SearchComponent } from './search/search.component';
 import {RouterModule, Routes} from '@angular/router';
 import { PostContainerComponent } from './post-container/post-container.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SubirFotoComponent } from './subir-foto/subir-foto.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'posts/:userid', component: PostContainerComponent},
   { path: 'search/:userid', component: SearchComponent},
   { path: 'discover/1', component: HomeComponent},
-  { path: 'profile/:userid', component: ProfileComponent}
+  { path: 'profile/:userid', component: ProfileComponent},
+  { path: 'subir/foto', component: SubirFotoComponent}
 ];
 @NgModule({
   declarations: [],
