@@ -1,9 +1,9 @@
 
 .navbar.mobile-menu{
   visibility:visible !important;
-  position: absolute;
+  position: fixed;
   display: flex;
-  bottom: 0;
+  bottom: 0px;
   color: white;
   width: 100%;
   border-top: 1px solid black;

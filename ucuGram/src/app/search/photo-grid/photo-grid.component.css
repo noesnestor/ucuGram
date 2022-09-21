@@ -1,4 +1,16 @@
-.card-img-top{
-    width: 100px;
+.search-bar{
+    width: 95%;
+    margin-left: 5px;
+}
+.grid{
     height: 100px;
+    width: 118px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 3px;
 }

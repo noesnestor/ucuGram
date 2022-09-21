@@ -1,10 +1,8 @@
 <input class="search-bar" type="text" placeholder="Search" (keyup)="search($event)">
 <div class="container">
     <div class="row">
-        <div>
-            <div class="col-sm-4 d-flex" *ngFor="let post of filteredPosts">
-                <img class="card-img-top" src={{post.src}} alt="">
-            </div>
+        <div class="grid col-sm-4 d-flex" *ngFor="let post of filteredPosts">
+            <img src={{post.src}} alt="">
         </div>
     </div>
 </div>
