@@ -25,7 +25,7 @@ export class UserService {
 
   getUser(userid: string): Observable<User> {
     const url = `${this.usersUrl}/${userid}`;
-    return this.http.get<User>(url).pipe(catchError(this.handleError<User>(`getUser userid=${userid}`)));
+    return this.http.get<User>(url);
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
