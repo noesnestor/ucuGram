@@ -2,17 +2,36 @@
     width: 95%;
     margin-left: 5px;
 }
-.grid{
-    height: 100px;
-    width: 105px;
-    object-fit: cover;
-    margin-top: 10px;
+
+
+@media(max-width: 374.99px){
+    .grid{
+        height: 100px;
+        width: 95px;
+        object-fit: cover;
+        margin-top: 10px;
+        
+    }
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        margin-top: 3px;
+    }
 }
-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    margin-top: 3px;
+@media(min-width: 375px) and (max-width: 767.99px){
+    .grid{
+        height: 100px;
+        width: 110px;
+        object-fit: cover;
+        margin-top: 10px;
+    }
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        margin-top: 3px;
+    }
 }
 p{
     font-size: 0.8rem;
@@ -25,5 +44,6 @@ p{
 
 .btn{
     width:99%;
-    margin-top: 6px;
+    margin-top: 8px;
+    overflow: scroll;
 }
