@@ -23,4 +23,21 @@ export class CarouselComponent implements OnInit {
     this.postService.getPosts().subscribe(posts => this.posts = posts);
   }
 
+  showPost(post:Post): void{
+    var modal = document.getElementById("modal-photo");
+    if (modal){
+      var img = document.getElementsByClassName("modal-content")[0];
+      img.setAttribute("src", post.src);
+      modal.style.display="block";
+    }
+  }
+  closeModal(): void {
+    var modal2 = document.getElementById("modal-photo");
+    if (modal2){
+      var img = document.getElementsByClassName("modal-content")[0];
+      img.setAttribute("src", "");
+      modal2.style.display="none";
+    }
+  }
+
 }
