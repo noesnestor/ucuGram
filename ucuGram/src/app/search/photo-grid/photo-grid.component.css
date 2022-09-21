@@ -4,7 +4,7 @@
 }
 .grid{
     height: 100px;
-    width: 118px;
+    width: 105px;
     object-fit: cover;
     margin-top: 10px;
 }
@@ -13,4 +13,17 @@ img{
     width: 100%;
     object-fit: cover;
     margin-top: 3px;
+}
+p{
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 7px;
+}
+
+.btn{
+    width:99%;
+    margin-top: 6px;
 }
