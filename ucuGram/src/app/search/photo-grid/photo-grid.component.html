@@ -1,8 +1,11 @@
 <input class="search-bar" type="text" placeholder="Search" (keyup)="search($event)">
+<p *ngIf="filteredPosts">ALL RESULTS</p>
 <div class="container">
     <div class="row">
         <div class="grid col-sm-4 d-flex" *ngFor="let post of filteredPosts">
             <img src={{post.src}} alt="">
         </div>
     </div>
+    <button *ngIf="filteredPosts" class="btn btn-light btn-outline-dark btn-block">See More</button>
 </div>
+

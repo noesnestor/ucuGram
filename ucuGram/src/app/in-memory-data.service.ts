@@ -29,14 +29,14 @@ export class InMemoryDataService implements InMemoryDbService {
     { id: 12, src: "assets/cats/cat5.jpg", date: "", user_id: "dasilva_lukinhas", alt: "cats"},
     { id: 13, src: "assets/cats/cat6.jpg", date: "", user_id: "pepe_garcia1", alt: "cats"},
     { id: 14, src: "assets/cats/cat7.jpg", date: "", user_id: "jacksonjane4ever", alt: "cats"},
-    { id: 15, src: "assets/fishes/fish1.jpeg", date: "", user_id: "kroosfriend15", alt: "fishes"},
+    { id: 15, src: "assets/fishes/fish1.jpg", date: "", user_id: "kroosfriend15", alt: "fishes"},
     { id: 16, src: "assets/fishes/fish2.jpg", date: "", user_id: "dasilva_lukinhas", alt: "fishes"},
     { id: 17, src: "assets/fishes/fish3.jpg", date: "", user_id: "pepe_garcia1", alt: "fishes"},
     { id: 18, src: "assets/fishes/fish4.jpg", date: "", user_id: "jacksonjane4ever", alt: "fishes"},
-    { id: 19, src: "assets/fishes/fish5.jpeg", date: "", user_id: "kroosfriend15", alt: "fishes"},
+    { id: 19, src: "assets/fishes/fish5.jpg", date: "", user_id: "kroosfriend15", alt: "fishes"},
     { id: 20, src: "assets/fishes/fish6.jpg", date: "", user_id: "dasilva_lukinhas", alt: "fishes"},
     { id: 21, src: "assets/fishes/fish7.jpg", date: "", user_id: "pepe_garcia1", alt: "fishes"},
-    { id: 22, src: "assets/postValverde.jpeg", date: "", user_id: "kroosfriend15", alt: "soccer"}
+    { id: 22, src: "assets/postValverde.jpg", date: "", user_id: "kroosfriend15", alt: "soccer"}
   ]
     return {users, posts};
   }
