@@ -5,10 +5,11 @@ var router = express.Router();
 
 const collection = 'postsCollection';
 
-/* GET notes listing. */
-router.get("/", async function (req, res, next) {
+/* GET posts for carousel listing. */
+router.get("/carousel", async function (req, res, next) {
   dbo = getDb();
-  await dbo.collection(collection).find({}).toArray(function (err, result) {
+  console.log(req); 
+  await dbo.collection(collection).find({}).limit(5).toArray(function (err, result) {
       if (err) {
         res.status(400).send({"400":"Error in fetching posts"});
       } else {
@@ -26,6 +27,27 @@ router.get("/:postid", async function (req, res, next) {
   } else {
     res.status(404).send({"404":`Did not find postid: ${req.params.postid}`});
   }
+});
+
+/* GET posts for search listing. */
+router.get("/search/:start", async function (req, res, next) {
+  if (isNaN(req.params.start)){
+    res.status(400).send({"400":"Error in parameter"});
+    return;
+  }
+  let startStr = req.params.start;
+  let startAt = parseInt(startStr);
+  options = {
+    skip : startAt
+  }
+  dbo = getDb();
+  await dbo.collection(collection).find({},options).limit(6).toArray(function (err, result) {
+    if (err) {
+      res.status(400).send({"400":"Error in fetching posts"});
+    } else {
+      res.status(200).json(result);
+    }
+  });
 });
 
 module.exports = router;
