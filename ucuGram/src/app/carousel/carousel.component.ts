@@ -20,7 +20,7 @@ export class CarouselComponent implements OnInit {
   }
 
   getPosts(): void{
-    this.postService.getPosts().subscribe(posts => this.posts = posts);
+    this.postService.getPostsCarousel().subscribe(posts => this.posts = posts);
   }
 
   showPost(post:Post): void{

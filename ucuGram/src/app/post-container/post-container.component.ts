@@ -25,8 +25,7 @@ export class PostContainerComponent implements OnInit {
 
   getUser(): void{
     if (this.post){
-      this.userService.getUser(this.post.user_id)
-      .subscribe(user => this.user = user);
+      this.userService.getUser(this.post.user_id).subscribe(user => this.user = user);
     }    
   }
 }

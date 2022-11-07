@@ -5,10 +5,10 @@ var router = express.Router();
 
 const collection = 'postsCollection';
 
+
 /* GET posts for carousel listing. */
 router.get("/carousel", async function (req, res, next) {
   dbo = getDb();
-  console.log(req); 
   await dbo.collection(collection).find({}).limit(5).toArray(function (err, result) {
       if (err) {
         res.status(400).send({"400":"Error in fetching posts"});
@@ -30,7 +30,7 @@ router.get("/:postid", async function (req, res, next) {
 });
 
 /* GET posts for search listing. */
-router.get("/search/:start", async function (req, res, next) {
+router.get("/search/:alt/:start", async function (req, res, next) {
   if (isNaN(req.params.start)){
     res.status(400).send({"400":"Error in parameter"});
     return;
@@ -41,7 +41,7 @@ router.get("/search/:start", async function (req, res, next) {
     skip : startAt
   }
   dbo = getDb();
-  await dbo.collection(collection).find({},options).limit(6).toArray(function (err, result) {
+  await dbo.collection(collection).find({alt: req.params.alt},options).limit(4).toArray(function (err, result) {
     if (err) {
       res.status(400).send({"400":"Error in fetching posts"});
     } else {

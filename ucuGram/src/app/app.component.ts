@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ucuGram';
-  user_id = 'pepe_garcia1';
+  user_id = '63691a58c09b64940da94790';
 }

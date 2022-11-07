@@ -1,6 +1,5 @@
 
 .navbar.mobile-menu{
-  visibility:visible !important;
   position: fixed;
   display: flex;
   bottom: 0px;

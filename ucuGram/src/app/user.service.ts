@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { User } from './user';
 
-import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -16,7 +15,7 @@ export class UserService {
   constructor(private http: HttpClient
   ) { }
 
-  private usersUrl = 'api/users';  // URL to web api
+  private usersUrl = 'http://localhost:3000/api/v1/users';  // URL to web api
 
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
 
@@ -25,17 +24,7 @@ export class UserService {
 
   getUser(userid: string): Observable<User> {
     const url = `${this.usersUrl}/${userid}`;
-    return this.http.get<User>(url);
+    return this.http.get<User>(url,this.httpOptions);
   }
 
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-
-      console.error(error);
-
-      console.log(`${operation} failed: ${error.message}`);
-
-      return of(result as T);
-    };
-  }
 }

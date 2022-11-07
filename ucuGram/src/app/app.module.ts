@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UserInfoComponent } from './user-info/user-info.component';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
-import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 import { PostContainerComponent } from './post-container/post-container.component';
 import { CarouselComponent } from './carousel/carousel.component';
@@ -13,7 +12,6 @@ import { MenubarComponent } from './menubar/menubar.component';
 import { NavBarSupComponent } from './nav-bar-sup/nav-bar-sup.component';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
-import { SearchBarComponent } from './search/search-bar/search-bar.component';
 import { PhotoGridComponent } from './search/photo-grid/photo-grid.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileUserComponent } from './profile-user/profile-user.component';
@@ -34,7 +32,6 @@ import { SubirFotoInteractionComponent } from './subir-foto-interaction/subir-fo
     NavBarSupComponent,
     HomeComponent,
     SearchComponent,
-    SearchBarComponent,
     PhotoGridComponent,
     ProfileComponent,
     ProfileUserComponent,
@@ -46,8 +43,8 @@ import { SubirFotoInteractionComponent } from './subir-foto-interaction/subir-fo
   imports: [
     BrowserModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }),
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

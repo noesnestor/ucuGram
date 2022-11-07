@@ -9,16 +9,45 @@ import { Post } from '../../post';
 })
 export class PhotoGridComponent implements OnInit {
 
-  filteredPosts? : Post[];
+  filteredPosts?: Post[];
   constructor(
     private postService : PostService,
   ) { }
+
+  private postsSent = 0;
+  private searchSet = "";
 
   ngOnInit(): void {
   }
 
   search(event: any) {
-    this.postService.getPostsByAlt(event.target.value).subscribe(posts => this.filteredPosts = posts);
+    if(this.filteredPosts)
+    {
+      this.filteredPosts = []
+    }
+    this.postsSent = 0;
+    this.postService.getPostsByAlt(event.target.value,this.postsSent).subscribe(posts => {
+      if(posts.length!=0){
+      this.postsSent+=4,
+      this.searchSet = posts[0].alt,
+      this.filteredPosts = posts
+      }
+    });
+  }
+
+  searchMore() {
+    this.postService.getPostsByAlt(this.searchSet,this.postsSent).subscribe(posts => {
+      if(posts.length!=0){
+      this.postsSent+=4,
+      this.searchSet = posts[0].alt,
+      this.filteredPosts?.push(...posts)
+      }
+      
+    });
+  }
+
+  addMorePhotos(){
+    this.searchMore();
   }
 
 }

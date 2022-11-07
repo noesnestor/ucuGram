@@ -1,5 +1,5 @@
 export interface User {
-    id: string;
+    _id: string;
     name: string;
     country: string;
     state: string;
@@ -7,4 +7,5 @@ export interface User {
     email: string;
     password: string;
     profilePic: string;
+    username : string;
 }

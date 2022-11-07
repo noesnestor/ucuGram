@@ -1,9 +1,14 @@
 <div class="container d-flex">
-    <div class="row">
-        <div class="col py-3">
-                <button type="button" class="btn btn-secondary border">Seleccionar archivo...</button>  
-        </div>
-        <textarea class="subir-foto-description" placeholder="Descripción"></textarea>
-    </div>
+        <form [formGroup]="addPost" (submit)="imageUploadAction()">
+            <div class="row py-3">
+                <input type="file" formControlName="postImage" name="image" accept="image/*" (change)="onImageUpload($event)">
+            </div>
+            <div class="row py-3">
+                <input type="text" formControlName="postDescription" name="description" placeholder="Descripción">
+            </div>
+            <div class="row py-3">
+                <button type="submit" class="btn btn-primary" [disabled]="!addPost.valid">Post</button>
+            </div>
+        </form>
 </div>
 

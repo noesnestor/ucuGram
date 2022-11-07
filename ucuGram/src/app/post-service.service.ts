@@ -11,25 +11,15 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+  httpOptionsJSON = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+  httpOptionsFile = { headers : new HttpHeaders({'Content-Type': 'multipart/form-data'})}
 
-  private postsUrl = 'api/posts';  // URL to web api
+  private postsUrl = 'http://localhost:3000/api/v1/posts';  // URL to web api
 
-  public getPosts(): Observable<Post[]>
+  public getPostsCarousel(): Observable<Post[]>
   {
-    return this.http.get<Post[]>(this.postsUrl);
-  }
-
-  getPostsByUserid(user_id: string): Observable<Post[]> {
-    let filteredPosts = new Array<Post>();
-    this.http.get<Post[]>(this.postsUrl).subscribe(posts => {
-      posts.forEach(post => {
-        if (post.user_id.includes(user_id)) {
-          filteredPosts.push(post);
-        }
-      });
-    });
-    return of(filteredPosts);
+    const url = this.postsUrl+"/carousel";
+    return this.http.get<Post[]>(url);
   }
 
   public getPostByID(id: number) : Observable<Post>
@@ -50,16 +40,13 @@ private handleError<T>(operation = 'operation', result?: T) {
     return of(result as T);
   };
 }
-  getPostsByAlt(event: string): Observable<Post[]> {
-    let filteredPosts = new Array<Post>();
-    this.http.get<Post[]>(this.postsUrl).subscribe(posts => {
-      posts.forEach(post => {
-        if (post.alt.includes(event)) {
-          filteredPosts.push(post);
-        }
-      });
-    });
-    return of(filteredPosts);
+  getPostsByAlt(event: string, startAt : number): Observable<Post[]> {
+    const url = `${this.postsUrl}/search/${event}/${startAt}`;
+    return this.http.get<Post[]>(url);
+  }
+
+  addPost(formData : FormData) {
+    return this.http.post<any>(this.postsUrl, formData, this.httpOptionsFile);
   }
 }
 

@@ -1,8 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Post } from '../post';
-import { PostService } from '../post-service.service';
-import { User } from '../user';
-import { UserService } from '../user.service';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-menubar',

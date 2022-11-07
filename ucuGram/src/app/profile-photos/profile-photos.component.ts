@@ -1,6 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { Post } from '../post';
-import { PostService } from '../post-service.service';
+import { ProfileService } from '../profile.service';
 import { User } from '../user';
 
 @Component({
@@ -10,10 +10,12 @@ import { User } from '../user';
 })
 export class ProfilePhotosComponent implements OnInit {
 
-  constructor(private postService : PostService) { }
+  constructor(private  profileService : ProfileService) { }
 
   @Input() posts? : Post[];
   @Input() user? : User;
+
+  private postsSent = 0; 
 
   ngOnInit(): void {
     this.getPosts()
@@ -22,7 +24,27 @@ export class ProfilePhotosComponent implements OnInit {
   getPosts() : void{
     if(this.user)
     {
-      this.postService.getPostsByUserid(this.user?.id).subscribe(posts => this.posts = posts);
+      this.profileService.getPostsFromUser(this.user?._id,this.postsSent).subscribe(posts =>{
+        if(posts.length!=0){
+          this.posts = posts,
+          this.postsSent+=4
+        }
+      } );
     }
+  }
+
+  getMorePosts() {
+    if(this.user){
+        this.profileService.getPostsFromUser(this.user?._id,this.postsSent).subscribe(posts =>{
+          if(posts.length!=0){
+            this.postsSent+=4,
+            this.posts?.push(...posts)
+          }
+        });
+      }
+    }
+
+  addMorePosts(){
+    this.getMorePosts();
   }
 }
